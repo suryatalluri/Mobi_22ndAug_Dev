@@ -1,0 +1,30 @@
+{
+    "group": "media",
+    "templateUrl": "/pages/Main/Main.html",
+    "controllerUrl": "/pages/Main/Main.js",
+    "variablesUrl": "/pages/Main/Main.variables.json",
+    "iconUrl": "/resources/images/imagelists/prefab-icon.png",
+    "resources": {
+        "styles":[],
+        "scripts":[]
+    },
+    "properties": {
+        "youtubeurl": {
+            "type": "string",
+            "value": "http://www.youtube.com/embed/N1umLw5I3As",
+            "bindable": "in-out-bound"
+        },
+        "width": {
+            "type": "string",
+            "value": "640"
+        },
+        "height": {
+            "type": "string",
+            "value": "360"
+        },
+        "allowfullscreen": {
+            "type": "boolean",
+            "value": true
+        }
+    }
+}

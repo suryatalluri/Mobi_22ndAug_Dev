@@ -1,0 +1,17 @@
+{
+  "name" : "db123__",
+  "entities" : [ {
+    "name" : "BLOBTYPES",
+    "syncType" : "APP_START",
+    "syncOptions" : {
+      "size" : 20,
+      "filter" : [ {
+        "attributeName" : "booleanCol",
+        "attributeValue" : false,
+        "attributeType" : "BOOLEAN",
+        "filterCondition" : "EQUALS"
+      } ],
+      "orderBy" : "pkId asc"
+    }
+  } ]
+}

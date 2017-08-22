@@ -1,20 +1,4 @@
 {
-  "appNotification" : {
-    "_id" : "wm-appErrorHandler-wm.NotificationVariable-1454664620943",
-    "name" : "appNotification",
-    "owner" : "App",
-    "category" : "wm.NotificationVariable",
-    "dataBinding" : [ {
-    "target" : "class",
-    "value" : "Error",
-    "type" : "list"
-    }, {
-    "target" : "toasterPosition",
-    "value" : "bottom right",
-    "type" : "list"
-    } ],
-    "operation" : "toast"
-  },
   "appInfo" : {
     "_id" : "wm-getAppInfo-wm.DeviceVariable-1444134876543",
     "name" : "appInfo",
@@ -28,6 +12,58 @@
       "cordovaversion" : "X.X.X"
     },
     "startUpdate" : true
+  },
+  "appNotification" : {
+    "_id" : "wm-appErrorHandler-wm.NotificationVariable-1454664620943",
+    "name" : "appNotification",
+    "owner" : "App",
+    "category" : "wm.NotificationVariable",
+    "dataBinding" : [ {
+      "target" : "class",
+      "value" : "Error",
+      "type" : "list"
+    }, {
+      "target" : "toasterPosition",
+      "value" : "bottom right",
+      "type" : "list"
+    } ],
+    "operation" : "toast"
+  },
+  "datasyncPull" : {
+    "_id" : "wm-datasyncPull-wm.DeviceVariable-1503381959794",
+    "name" : "datasyncPull",
+    "owner" : "App",
+    "category" : "wm.DeviceVariable",
+    "dataBinding" : [ ],
+    "service" : "datasync",
+    "operation" : "pull",
+    "dataSet" : {
+      "tasksCompleted" : 0,
+      "tasksTotal" : 0,
+      "inProgress" : false
+    },
+    "startUpdate" : true,
+    "autoUpdate" : false,
+    "clearData" : true
+  },
+  "datasyncPush" : {
+    "_id" : "wm-datasyncPush-wm.DeviceVariable-1503381959794",
+    "name" : "datasyncPush",
+    "owner" : "App",
+    "category" : "wm.DeviceVariable",
+    "dataBinding" : [ ],
+    "service" : "datasync",
+    "operation" : "push",
+    "dataSet" : {
+      "success" : 0,
+      "error" : 0,
+      "completed" : 0,
+      "total" : 0,
+      "inProgress" : false
+    },
+    "spinnerContext" : "page",
+    "startUpdate" : false,
+    "autoUpdate" : false
   },
   "deviceInfo" : {
     "_id" : "wm-deviceInfo-getDeviceInfo-wm.DeviceVariable-1444134852623",
@@ -53,6 +89,28 @@
     "category" : "wm.NavigationVariable",
     "operation" : "gotoPage",
     "pageName" : "Main"
+  },
+  "networkInfo" : {
+    "_id" : "wm-networkInfo-wm.DeviceVariable-1503381959795",
+    "name" : "networkInfo",
+    "owner" : "App",
+    "category" : "wm.DeviceVariable",
+    "dataBinding" : [ {
+      "target" : "networkStatus",
+      "value" : "bind:$root.networkStatus",
+      "type" : "boolean"
+    } ],
+    "service" : "device",
+    "operation" : "getNetworkInfo",
+    "dataSet" : {
+      "connectionType" : "NONE",
+      "isOnline" : true,
+      "isOffline" : false
+    },
+    "onOnline" : "Variables.datasyncPush.invoke()",
+    "startUpdate" : true,
+    "autoUpdate" : true,
+    "networkStatus" : "bind:$root.networkStatus"
   },
   "supportedLocale" : {
     "_id" : "wm-wm.Variable1402640443182",

@@ -1,10 +1,36 @@
-<wm-page data-ng-controller="MainPageController" name="mainpage">
-  <wm-left-panel content="leftnav" columnwidth="2" name="left_panel1"></wm-left-panel>
-  <wm-mobile-navbar name="mobile_navbar1" title="Title" leftnavpaneliconclass="wi wi-menu" backbutton="false">
-    <wm-anchor caption="" name="AddLink" iconclass="wi wi-gear"></wm-anchor>
-  </wm-mobile-navbar>
-  <wm-content name="content1">
-    <wm-page-content columnwidth="12" name="page_content1"></wm-page-content>
-  </wm-content>
-  <wm-mobile-tabbar dataset="home,music,edit" name="mobile_tabbar1"></wm-mobile-tabbar>
+<wm-page name="mainpage" data-ng-controller="MainPageController">
+    <wm-left-panel name="left_panel1" content="leftnav" columnwidth="2"></wm-left-panel>
+    <wm-mobile-navbar title="Title" name="mobile_navbar1" backbutton="false" leftnavpaneliconclass="wi wi-menu">
+        <wm-anchor name="AddLink" caption="" iconclass="wi wi-gear"></wm-anchor>
+    </wm-mobile-navbar>
+    <wm-content name="content1">
+        <wm-page-content name="page_content1" columnwidth="12">
+            <wm-list class="media-list" name="executeAlltypesData1List1" dataset="bind:Variables.Db123__ExecuteAlltypesData1.dataSet" itemsperrow="xs-1 sm-1 md-1 lg-1" template="true" itemclass="list-group-item" listclass="list-group" navigation="Pager">
+                <wm-listtemplate name="listtemplate1" layout="inline">
+                    <wm-container class="media-left" name="container1">
+                        <wm-picture class="media-object" name="Picture" height="32pt" width="32pt" picturesource="bind:Variables.Db123__ExecuteAlltypesData1.dataSet.blobCol" shape="circle"></wm-picture>
+                    </wm-container>
+                    <wm-container class="media-body" name="container2" padding="unset unset unset 1.25em">
+                        <wm-label class="p media-heading" name="Name" caption="bind:Variables.Db123__ExecuteAlltypesData1.dataSet.stringCol" fontsize="1.143" fontunit="em"></wm-label>
+                        <wm-label class="p text-muted" name="JobTitle" caption="bind:Variables.Db123__ExecuteAlltypesData1.dataSet.textCol"></wm-label>
+                    </wm-container>
+                    <wm-container class="media-right media-top" name="container3">
+                        <wm-button class="btn-transparent" name="button1" iconclass="wi wi-share fa-2x"></wm-button>
+                    </wm-container>
+                </wm-listtemplate>
+            </wm-list>
+            <wm-tabs name="tabs1">
+                <wm-tabpane name="tabpane1" content="test"></wm-tabpane>
+                <wm-tabpane name="tabpane2"></wm-tabpane>
+                <wm-tabpane name="tabpane3"></wm-tabpane>
+            </wm-tabs>
+        </wm-page-content>
+    </wm-content>
+    <wm-mobile-tabbar name="mobile_tabbar1" show="bind:Variables.staticVariable1.dataSet.dataValue" dataset="home,music,edit,test,test1" morebuttoniconclass="wi wi-more-vert"></wm-mobile-tabbar>
+    <wm-view class="dialog-view" name="view1">
+        <wm-alertdialog name="alertdialog1"></wm-alertdialog>
+    </wm-view>
+    <wm-view class="dialog-view" name="view2">
+        <wm-confirmdialog name="confirmdialog1"></wm-confirmdialog>
+    </wm-view>
 </wm-page>

@@ -1,0 +1,24 @@
+{
+  "AlltypesData1" : {
+    "name" : "AlltypesData1",
+    "description" : "AlltypesData",
+    "version" : "V2",
+    "queryString" : "from AllTypes",
+    "countQueryString" : "select count(*) from AllTypes",
+    "nativeSql" : false,
+    "fetchCount" : true,
+    "type" : "SELECT",
+    "parameters" : [ ],
+    "request" : {
+      "wrapped" : false,
+      "typeRef" : null,
+      "method" : "GET"
+    },
+    "identifiers" : [ ],
+    "response" : {
+      "typeRef" : "com.mobi_22ndaug_dev.db123__.AllTypes",
+      "returns" : "ENTITY",
+      "responseType" : "PAGINATED"
+    }
+  }
+}

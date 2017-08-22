@@ -14,4 +14,8 @@
   "name" : "leftnav",
   "type" : "LEFTNAV",
   "params" : [ ]
+}, {
+  "name" : "test",
+  "type" : "PARTIAL",
+  "params" : [ ]
 } ]

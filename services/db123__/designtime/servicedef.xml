@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<service xmlns="http://www.activegrid.com/namespaces/ServiceDefinitions/1.0" id="db123__" type="DataService" springFile="db123__.spring.xml">
+    <dataobjects/>
+</service>
